@@ -40,7 +40,7 @@ public class Main {
 			System.out.println();
 			System.out.println("maquina turno");
 			if(posB < c.getBolaP()) {
-				System.out.println("você moveu para trás");
+				System.out.println("você moveu para tras");
 				back = true;
 			}
 			if(c.getCampo()[c.getBolaP()-1] == 1 && back == false) {
@@ -66,6 +66,7 @@ public class Main {
 			else if(c.getBolaP()+3 < c.getTam() && !(c.getCampo()[c.getBolaP()+1] == 0 && c.getCampo()[c.getBolaP()+2] == 0 && c.getCampo()[c.getBolaP()+3] == 0)){
 				System.out.println("invadindo meu territorio");
 				c.colocarF(c.getBolaP()-1);
+				back = false;
 			}
 			else if(back) {
 				System.out.println("tentando vencer");
@@ -89,6 +90,7 @@ public class Main {
 				}
 			}*/
 		}
+		s.close();
 	}
 
 }
